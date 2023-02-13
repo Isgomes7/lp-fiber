@@ -1,0 +1,413 @@
+@import "mixin";
+@import "var";
+
+header {
+    background-color: $c-background;
+
+    .wrapper-header {
+        @include flex(center, space-between);
+        padding: $trim 0;
+        position: relative;
+
+        ul {
+            @include flex('', '', '', $trim);
+
+            li {
+                @include text('', $c-black, '', 300);
+            }
+
+            @include bp(max-width, $bp-medium) {
+                display: none;
+            }
+
+            &.active {
+                top: $x-large;
+                border-radius: $gap $gap 0 0;
+            }
+        }
+
+        .wrapper-buttons {
+            @include flex('', space-between);
+            width: 100%;
+            max-width: 350px;
+
+            button,
+            a {
+                width: 100%;
+                max-width: 150px;
+            }
+
+            @include bp(max-width, $bp-medium) {
+                display: none;
+            }
+
+            &.active {
+                top: 212px;
+                max-width: 100%;
+                border-radius: 0 0 $gap $gap;
+            }
+        }
+
+        .menu-mobile {
+            @include bp(min-width, 1280px) {
+                display: none;
+            }
+        }
+
+        ul,
+        .wrapper-buttons {
+            &.active {
+                position: absolute;
+                width: 100%;
+                @include flex(center, '', column, $trim);
+                background-color: $c-white;
+                padding: $trim;
+            }
+        }
+    }
+}
+
+main {
+    .section-01 {
+        background-color: $c-background;
+
+        .wrapper-section {
+            @include bp(max-width, $bp-medium) {
+                @include flex(center, '', column-reverse !important);
+            }
+        }
+
+        .left {
+            @include flex('', '', column, $box-spacing);
+            width: 100%;
+            max-width: 650px;
+
+            .stars {
+                @include flex('', '', '', $trim-small);
+
+                p {
+                    @include text('', $c-black, '', 400);
+                }
+
+                @include bp(max-width, $bp-medium) {
+                    display: none;
+                }
+            }
+
+            h1 {
+                @include text('', $c-black, '', 700, $large);
+            }
+
+            .wrapper-content {
+                @include flex(center, '', '', $trim);
+
+                button, a {
+                    max-width: 200px;
+
+                    @include bp(max-width, $bp-medium) {
+                        max-width: 100%;
+                    }
+                }
+
+                .example {
+                    @include text('', $c-purple, '', 700);
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline
+                    }
+                }
+
+                @include bp(max-width, $bp-medium) {
+                    flex-direction: column;
+                }
+            }
+
+            ul {
+                @include flex('', '', '', $trim);
+
+                li {
+                    @include flex(center, '', '', $trim-small);
+                }
+
+                @include bp(max-width, $bp-medium) {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        .right {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+
+    .section-02 {
+
+        .wrapper-section {
+            &.no-flex {
+                @include flex('', '', column, $trim);
+            }
+        }
+
+        span {
+            @include text('', $c-purple, '', 700);
+        }
+
+        h2 {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        ul {
+            @include flex('', '', '', $large);
+
+            li {
+                @include flex(flex-start, '', column, $box-spacing);
+
+                h3 {
+                    @include text('', $c-black, '', 700);
+                }
+            }
+
+            @include bp(max-width, $bp-medium) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .section-03 {
+        .container {
+            background-color: $c-purple;
+            border-radius: $trim-small;
+
+            .wrapper-section {
+                gap: $big;
+                padding: $big 0 0;
+
+                .left {
+                    @include flex('', '', column, $box-spacing);
+
+                    h2 {
+                        @include text('', $c-white, '', 700, 35px);
+                    }
+
+                    p {
+                        @include text('', $c-white, '', 300);
+                    }
+
+                    button {
+                        max-width: 200px;
+
+                        @include bp(max-width, $bp-medium) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+
+                .right img {
+                    position: relative;
+                    bottom: -5px;
+                }
+            }
+        }
+    }
+
+    .section-04 {
+        ul {
+            @include flex('', '', '', $trim);
+
+            li {
+                @include flex('', '', column, $trim);
+                border: 1px solid $c-border;
+                padding: $trim;
+                border-radius: $gap;
+
+                .top {
+                    @include flex(center, '', '', $trim-small);
+
+                    .name {
+                        p {
+                            @include text('', $c-purple, '', 600, $trim-small);
+                        }
+
+                        span {
+                            @include text('', $c-black, '', 400, $trim-small);
+                        }
+                    }
+                }
+
+                .bottom p {
+                    @include text('', $c-black, '', 400);
+                }
+            }
+
+            @include bp(max-width, $bp-medium) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .section-01,
+    .section-02,
+    .section-03,
+    .section-04 {
+        padding: $x-large 0;
+
+        @include bp(max-width, $bp-medium) {
+            padding: $large 0;
+        }
+    }
+
+    .wrapper-section {
+        &.flex {
+            @include flex(center, space-between);
+
+            @include bp(max-width, $bp-medium) {
+                @include flex(center, '', column, $trim);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $c-background;
+
+    .wrapper-footer {
+        @include grid('', space-between);
+        grid-template: "one two three four five" / auto auto auto auto auto;
+        padding: $large 0;
+
+        .column {
+            @include flex('', '', column, $trim);
+
+            ul {
+                @include flex('', '', column, $trim);
+
+                li {
+                    @include text('', $c-li, '', 300);
+                }
+            }
+
+            &.one {
+                grid-area: one;
+                width: 100%;
+                max-width: 500px;
+            }
+
+            &.two {
+                grid-area: two;
+            }
+
+            &.three {
+                grid-area: three;
+            }
+
+            &.four {
+                grid-area: four;
+            }
+
+            &.five {
+                grid-area: five;
+            }
+
+            p {
+                @include text('', $c-li, '', 300);
+            }
+
+            .logo p {
+                @include text('', $c-black, '', 700);
+            }
+
+            .made {
+                @include flex(center, '', '', $gap);
+            }
+        }
+
+        @include bp(max-width, $bp-medium) {
+            grid-template: "one"
+                "two"
+                "three"
+                "four"
+                "five" / auto;
+            gap: $large
+        }
+    }
+}
+
+button {
+    height: $large;
+    width: 100%;
+    border-radius: $small;
+
+    &.in {
+        background-color: transparent;
+
+        span {
+            @include text('', $c-black, '', 700);
+        }
+    }
+
+    &.start {
+        background-color: $c-white;
+
+        span {
+            @include text('', $c-purple, '', 700);
+        }
+    }
+
+    &.profile {
+        background-color: $c-white;
+        border: 1px solid $c-border;
+
+        span {
+            @include text('', $c-purple, '', 700);
+        }
+
+        &:hover {
+            background-color: $c-purple;
+
+            span {
+                @include text('', $c-white, '', 700);
+            }
+        }
+    }
+
+    &:hover {
+        opacity: .85;
+    }
+}
+
+a {
+    height: $large;
+    width: 100%;
+    border-radius: $small;
+    @include flex(center, center);
+
+    &.up,
+    &.create {
+        background-color: $c-purple;
+
+        span {
+            @include text('', $c-white, '', 700);
+        }
+    }
+
+    &:hover {
+        opacity: .85;
+    }
+}
+
+p {
+    @include text('', $c-text, '', 400);
+    line-height: 1.5;
+}
+
+
+h2 {
+    @include text('', $c-black, '', 700, $trim);
+}
+
+.logo p {
+    @include text('', $c-black, '', 700);
+}

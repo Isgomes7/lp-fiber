@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap");
+/* line 4, ../scss/modal.scss */
+header {
+  background-color: #fbf8f3;
+}
+/* line 7, ../scss/modal.scss */
+header .wrapper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  position: relative;
+}
+/* line 12, ../scss/modal.scss */
+header .wrapper-header ul {
+  display: flex;
+  gap: 30px;
+}
+/* line 15, ../scss/modal.scss */
+header .wrapper-header ul li {
+  color: #000000;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  /* line 12, ../scss/modal.scss */
+  header .wrapper-header ul {
+    display: none;
+  }
+}
+/* line 23, ../scss/modal.scss */
+header .wrapper-header ul.active {
+  top: 80px;
+  border-radius: 10px 10px 0 0;
+}
+/* line 29, ../scss/modal.scss */
+header .wrapper-header .wrapper-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+}
+/* line 34, ../scss/modal.scss */
+header .wrapper-header .wrapper-buttons button,
+header .wrapper-header .wrapper-buttons a {
+  width: 100%;
+  max-width: 150px;
+}
+@media screen and (max-width: 768px) {
+  /* line 29, ../scss/modal.scss */
+  header .wrapper-header .wrapper-buttons {
+    display: none;
+  }
+}
+/* line 44, ../scss/modal.scss */
+header .wrapper-header .wrapper-buttons.active {
+  top: 212px;
+  max-width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+@media screen and (min-width: 1280px) {
+  /* line 51, ../scss/modal.scss */
+  header .wrapper-header .menu-mobile {
+    display: none;
+  }
+}
+/* line 59, ../scss/modal.scss */
+header .wrapper-header ul.active,
+header .wrapper-header .wrapper-buttons.active {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #FFFFFF;
+  padding: 30px;
+}
+
+/* line 70, ../scss/modal.scss */
+.modal-sign-in {
+  margin: 100px 0;
+}
+/* line 73, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal {
+  display: flex;
+}
+/* line 76, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left {
+  width: 100%;
+}
+/* line 79, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 84, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check .container-check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 98, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check .container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* line 107, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #FFFFFF;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+}
+/* line 119, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check .container-check input:checked ~ .checkmark {
+  background-color: #4d13d1;
+}
+/* line 124, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* line 131, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check .container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+/* line 136, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check .container-check .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 149, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left h4 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 15px;
+}
+/* line 153, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .wrapper-input {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 156, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .wrapper-input .input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* line 159, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .wrapper-input .input input {
+  border: 1px solid #e9e9e9;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+/* line 166, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .wrapper-input .input input::placeholder {
+  color: #a9a9a9;
+  font-weight: 400;
+}
+/* line 172, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left span {
+  color: #4d13d1;
+  font-weight: 400;
+}
+/* line 175, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left span.terms {
+  color: #4d13d1;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* line 181, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .check {
+  display: flex;
+}
+/* line 185, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left a span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+/* line 189, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .left .login {
+  text-align: center;
+}
+/* line 194, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .right {
+  background-color: #4d13d1;
+  padding: 50px;
+  width: 100%;
+  position: relative;
+}
+/* line 200, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .right .wrapper-right {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+/* line 206, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .right h2 {
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 15px auto;
+}
+/* line 211, ../scss/modal.scss */
+.modal-sign-in .wrapper-modal .right p {
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  /* line 194, ../scss/modal.scss */
+  .modal-sign-in .wrapper-modal .right {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 73, ../scss/modal.scss */
+  .modal-sign-in .wrapper-modal {
+    flex-direction: column;
+  }
+}
+
+/* line 226, ../scss/modal.scss */
+footer {
+  background-color: #fbf8f3;
+}
+/* line 229, ../scss/modal.scss */
+footer .wrapper-footer {
+  display: grid;
+  justify-content: space-between;
+  grid-template: "one two three four five" / auto auto auto auto auto;
+  padding: 50px 0;
+}
+/* line 234, ../scss/modal.scss */
+footer .wrapper-footer .column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 237, ../scss/modal.scss */
+footer .wrapper-footer .column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 240, ../scss/modal.scss */
+footer .wrapper-footer .column ul li {
+  color: #777572;
+  font-weight: 300;
+}
+/* line 245, ../scss/modal.scss */
+footer .wrapper-footer .column.one {
+  grid-area: one;
+  width: 100%;
+  max-width: 500px;
+}
+/* line 251, ../scss/modal.scss */
+footer .wrapper-footer .column.two {
+  grid-area: two;
+}
+/* line 255, ../scss/modal.scss */
+footer .wrapper-footer .column.three {
+  grid-area: three;
+}
+/* line 259, ../scss/modal.scss */
+footer .wrapper-footer .column.four {
+  grid-area: four;
+}
+/* line 263, ../scss/modal.scss */
+footer .wrapper-footer .column.five {
+  grid-area: five;
+}
+/* line 267, ../scss/modal.scss */
+footer .wrapper-footer .column p {
+  color: #777572;
+  font-weight: 300;
+}
+/* line 271, ../scss/modal.scss */
+footer .wrapper-footer .column .logo p {
+  color: #000000;
+  font-weight: 700;
+}
+/* line 275, ../scss/modal.scss */
+footer .wrapper-footer .column .made {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  /* line 229, ../scss/modal.scss */
+  footer .wrapper-footer {
+    grid-template: "one" "two" "three" "four" "five" / auto;
+    gap: 50px;
+  }
+}
+
+/* line 291, ../scss/modal.scss */
+button {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+/* line 296, ../scss/modal.scss */
+button.in {
+  background-color: transparent;
+}
+/* line 299, ../scss/modal.scss */
+button.in span {
+  color: #000000;
+  font-weight: 700;
+}
+/* line 304, ../scss/modal.scss */
+button.start {
+  background-color: #FFFFFF;
+}
+/* line 307, ../scss/modal.scss */
+button.start span {
+  color: #4d13d1;
+  font-weight: 700;
+}
+/* line 312, ../scss/modal.scss */
+button.profile {
+  background-color: #FFFFFF;
+  border: 1px solid #dadada;
+}
+/* line 316, ../scss/modal.scss */
+button.profile span {
+  color: #4d13d1;
+  font-weight: 700;
+}
+/* line 320, ../scss/modal.scss */
+button.profile:hover {
+  background-color: #4d13d1;
+}
+/* line 323, ../scss/modal.scss */
+button.profile:hover span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+/* line 329, ../scss/modal.scss */
+button:hover {
+  opacity: .85;
+}
+
+/* line 334, ../scss/modal.scss */
+a {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 340, ../scss/modal.scss */
+a.up, a.create {
+  background-color: #4d13d1;
+}
+/* line 344, ../scss/modal.scss */
+a.up span, a.create span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+/* line 349, ../scss/modal.scss */
+a:hover {
+  opacity: .85;
+}
+
+/* line 354, ../scss/modal.scss */
+p {
+  color: #4f4f4f;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* line 360, ../scss/modal.scss */
+h2 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* line 364, ../scss/modal.scss */
+.logo p {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* line 368, ../scss/modal.scss */
+.slick-list {
+  overflow: hidden;
+}
+/* line 371, ../scss/modal.scss */
+.slick-list .slick-slide {
+  position: relative;
+  float: left;
+  margin: 0 5px;
+}
+
+/* line 378, ../scss/modal.scss */
+.slick-dots {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+}
+/* line 386, ../scss/modal.scss */
+.slick-dots li button {
+  width: 15px;
+  height: 15px;
+  background-color: #a587ff;
+  font-size: 0;
+  border-radius: 50%;
+}
+/* line 395, ../scss/modal.scss */
+.slick-dots li.slick-active button {
+  background-color: #FFFFFF;
+}

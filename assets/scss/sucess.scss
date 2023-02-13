@@ -1,0 +1,289 @@
+@import "mixin";
+@import "var";
+
+header {
+    background-color: $c-background;
+
+    .wrapper-header {
+        @include flex(center, space-between);
+        padding: $trim 0;
+        position: relative;
+
+        ul {
+            @include flex('', '', '', $trim);
+
+            li {
+                @include text('', $c-black, '', 300);
+            }
+
+            @include bp(max-width, $bp-medium) {
+                display: none;
+            }
+
+            &.active {
+                top: $x-large;
+                border-radius: $gap $gap 0 0;
+            }
+        }
+
+        .wrapper-buttons {
+            @include flex('', space-between);
+            width: 100%;
+            max-width: 350px;
+
+            button,
+            a {
+                width: 100%;
+                max-width: 150px;
+            }
+
+            @include bp(max-width, $bp-medium) {
+                display: none;
+            }
+
+            &.active {
+                top: 212px;
+                max-width: 100%;
+                border-radius: 0 0 $gap $gap;
+            }
+        }
+
+        .menu-mobile {
+            @include bp(min-width, 1280px) {
+                display: none;
+            }
+        }
+
+        ul,
+        .wrapper-buttons {
+            &.active {
+                position: absolute;
+                width: 100%;
+                @include flex(center, '', column, $trim);
+                background-color: $c-white;
+                padding: $trim;
+                z-index: 999;
+            }
+        }
+    }
+}
+
+main {
+    .wrapper-sucess {
+        @include flex(center, '', column, $trim);
+        margin: $x-large 0;
+        position: relative;
+
+        .home {
+            @include flex(center, '', '', $trim-small);
+
+            a {
+                @include text('', $c-black, '', 400);
+            }
+        }
+
+        .container-check {
+            display: block;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container-check input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: $large;
+            width: $large;
+            background-color: $c-white;
+            border: 1px solid $c-border;
+            border-radius: 50%;
+        }
+
+        .container-check:hover input~.checkmark {
+            background-color: $c-purple;
+        }
+
+        .container-check input:checked~.checkmark {
+            background-color: $c-purple;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .container-check input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .container-check .checkmark:after {
+            left: 17px;
+            top: 14px;
+            width: $gap;
+            height: $trim-small;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+footer {
+    background-color: $c-background;
+
+    .wrapper-footer {
+        @include grid('', space-between);
+        grid-template: "one two three four five" / auto auto auto auto auto;
+        padding: $large 0;
+
+        .column {
+            @include flex('', '', column, $trim);
+
+            ul {
+                @include flex('', '', column, $trim);
+
+                li {
+                    @include text('', $c-li, '', 300);
+                }
+            }
+
+            &.one {
+                grid-area: one;
+                width: 100%;
+                max-width: 500px;
+            }
+
+            &.two {
+                grid-area: two;
+            }
+
+            &.three {
+                grid-area: three;
+            }
+
+            &.four {
+                grid-area: four;
+            }
+
+            &.five {
+                grid-area: five;
+            }
+
+            p {
+                @include text('', $c-li, '', 300);
+            }
+
+            .logo p {
+                @include text('', $c-black, '', 700);
+            }
+
+            .made {
+                @include flex(center, '', '', $gap);
+            }
+        }
+
+        @include bp(max-width, $bp-medium) {
+            grid-template: "one"
+                "two"
+                "three"
+                "four"
+                "five" / auto;
+            gap: $large
+        }
+    }
+}
+
+button {
+    height: $large;
+    width: 100%;
+    border-radius: $small;
+
+    &.in {
+        background-color: transparent;
+
+        span {
+            @include text('', $c-black, '', 700);
+        }
+    }
+
+    &.start {
+        background-color: $c-white;
+
+        span {
+            @include text('', $c-purple, '', 700);
+        }
+    }
+
+    &.profile {
+        background-color: $c-white;
+        border: 1px solid $c-border;
+
+        span {
+            @include text('', $c-purple, '', 700);
+        }
+
+        &:hover {
+            background-color: $c-purple;
+
+            span {
+                @include text('', $c-white, '', 700);
+            }
+        }
+    }
+
+    &:hover {
+        opacity: .85;
+    }
+}
+
+a {
+    height: $large;
+    width: 100%;
+    border-radius: $small;
+    @include flex(center, center);
+
+    &.up,
+    &.create {
+        background-color: $c-purple;
+
+        span {
+            @include text('', $c-white, '', 700);
+        }
+    }
+
+    &:hover {
+        opacity: .85;
+    }
+}
+
+p {
+    @include text('', $c-text, '', 400);
+    line-height: 1.5;
+}
+
+
+h2 {
+    @include text('', $c-black, center, 700, $trim);
+}
+
+.logo p {
+    @include text('', $c-black, '', 700);
+}

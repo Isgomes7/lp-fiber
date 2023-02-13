@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap");
+/* line 4, ../scss/home.scss */
+header {
+  background-color: #fbf8f3;
+}
+/* line 7, ../scss/home.scss */
+header .wrapper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  position: relative;
+}
+/* line 12, ../scss/home.scss */
+header .wrapper-header ul {
+  display: flex;
+  gap: 30px;
+}
+/* line 15, ../scss/home.scss */
+header .wrapper-header ul li {
+  color: #000000;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  /* line 12, ../scss/home.scss */
+  header .wrapper-header ul {
+    display: none;
+  }
+}
+/* line 23, ../scss/home.scss */
+header .wrapper-header ul.active {
+  top: 80px;
+  border-radius: 10px 10px 0 0;
+}
+/* line 29, ../scss/home.scss */
+header .wrapper-header .wrapper-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+}
+/* line 34, ../scss/home.scss */
+header .wrapper-header .wrapper-buttons button,
+header .wrapper-header .wrapper-buttons a {
+  width: 100%;
+  max-width: 150px;
+}
+@media screen and (max-width: 768px) {
+  /* line 29, ../scss/home.scss */
+  header .wrapper-header .wrapper-buttons {
+    display: none;
+  }
+}
+/* line 44, ../scss/home.scss */
+header .wrapper-header .wrapper-buttons.active {
+  top: 212px;
+  max-width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+@media screen and (min-width: 1280px) {
+  /* line 51, ../scss/home.scss */
+  header .wrapper-header .menu-mobile {
+    display: none;
+  }
+}
+/* line 59, ../scss/home.scss */
+header .wrapper-header ul.active,
+header .wrapper-header .wrapper-buttons.active {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #FFFFFF;
+  padding: 30px;
+}
+
+/* line 71, ../scss/home.scss */
+main .section-01 {
+  background-color: #fbf8f3;
+}
+@media screen and (max-width: 768px) {
+  /* line 74, ../scss/home.scss */
+  main .section-01 .wrapper-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse !important;
+  }
+}
+/* line 80, ../scss/home.scss */
+main .section-01 .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 650px;
+}
+/* line 85, ../scss/home.scss */
+main .section-01 .left .stars {
+  display: flex;
+  gap: 15px;
+}
+/* line 88, ../scss/home.scss */
+main .section-01 .left .stars p {
+  color: #000000;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  /* line 85, ../scss/home.scss */
+  main .section-01 .left .stars {
+    display: none;
+  }
+}
+/* line 97, ../scss/home.scss */
+main .section-01 .left h1 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 50px;
+}
+/* line 101, ../scss/home.scss */
+main .section-01 .left .wrapper-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+/* line 104, ../scss/home.scss */
+main .section-01 .left .wrapper-content button, main .section-01 .left .wrapper-content a {
+  max-width: 200px;
+}
+@media screen and (max-width: 768px) {
+  /* line 104, ../scss/home.scss */
+  main .section-01 .left .wrapper-content button, main .section-01 .left .wrapper-content a {
+    max-width: 100%;
+  }
+}
+/* line 112, ../scss/home.scss */
+main .section-01 .left .wrapper-content .example {
+  color: #4d13d1;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* line 116, ../scss/home.scss */
+main .section-01 .left .wrapper-content .example:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  /* line 101, ../scss/home.scss */
+  main .section-01 .left .wrapper-content {
+    flex-direction: column;
+  }
+}
+/* line 126, ../scss/home.scss */
+main .section-01 .left ul {
+  display: flex;
+  gap: 30px;
+}
+/* line 129, ../scss/home.scss */
+main .section-01 .left ul li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+@media screen and (max-width: 768px) {
+  /* line 126, ../scss/home.scss */
+  main .section-01 .left ul {
+    flex-direction: column;
+  }
+}
+/* line 139, ../scss/home.scss */
+main .section-01 .right {
+  width: 100%;
+  max-width: 600px;
+}
+/* line 148, ../scss/home.scss */
+main .section-02 .wrapper-section.no-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 153, ../scss/home.scss */
+main .section-02 span {
+  color: #4d13d1;
+  font-weight: 700;
+}
+/* line 157, ../scss/home.scss */
+main .section-02 h2 {
+  width: 100%;
+  max-width: 500px;
+}
+/* line 162, ../scss/home.scss */
+main .section-02 ul {
+  display: flex;
+  gap: 50px;
+}
+/* line 165, ../scss/home.scss */
+main .section-02 ul li {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+/* line 168, ../scss/home.scss */
+main .section-02 ul li h3 {
+  color: #000000;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  /* line 162, ../scss/home.scss */
+  main .section-02 ul {
+    flex-direction: column;
+  }
+}
+/* line 180, ../scss/home.scss */
+main .section-03 .container {
+  background-color: #4d13d1;
+  border-radius: 15px;
+}
+/* line 184, ../scss/home.scss */
+main .section-03 .container .wrapper-section {
+  gap: 100px;
+  padding: 100px 0 0;
+}
+/* line 188, ../scss/home.scss */
+main .section-03 .container .wrapper-section .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* line 191, ../scss/home.scss */
+main .section-03 .container .wrapper-section .left h2 {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 35px;
+}
+/* line 195, ../scss/home.scss */
+main .section-03 .container .wrapper-section .left p {
+  color: #FFFFFF;
+  font-weight: 300;
+}
+/* line 199, ../scss/home.scss */
+main .section-03 .container .wrapper-section .left button {
+  max-width: 200px;
+}
+@media screen and (max-width: 768px) {
+  /* line 199, ../scss/home.scss */
+  main .section-03 .container .wrapper-section .left button {
+    max-width: 100%;
+  }
+}
+/* line 208, ../scss/home.scss */
+main .section-03 .container .wrapper-section .right img {
+  position: relative;
+  bottom: -5px;
+}
+/* line 217, ../scss/home.scss */
+main .section-04 ul {
+  display: flex;
+  gap: 30px;
+}
+/* line 220, ../scss/home.scss */
+main .section-04 ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid #dadada;
+  padding: 30px;
+  border-radius: 10px;
+}
+/* line 226, ../scss/home.scss */
+main .section-04 ul li .top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/* line 230, ../scss/home.scss */
+main .section-04 ul li .top .name p {
+  color: #4d13d1;
+  font-weight: 600;
+  font-size: 15px;
+}
+/* line 234, ../scss/home.scss */
+main .section-04 ul li .top .name span {
+  color: #000000;
+  font-weight: 400;
+  font-size: 15px;
+}
+/* line 240, ../scss/home.scss */
+main .section-04 ul li .bottom p {
+  color: #000000;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  /* line 217, ../scss/home.scss */
+  main .section-04 ul {
+    flex-direction: column;
+  }
+}
+/* line 251, ../scss/home.scss */
+main .section-01,
+main .section-02,
+main .section-03,
+main .section-04 {
+  padding: 80px 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 251, ../scss/home.scss */
+  main .section-01,
+  main .section-02,
+  main .section-03,
+  main .section-04 {
+    padding: 50px 0;
+  }
+}
+/* line 263, ../scss/home.scss */
+main .wrapper-section.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  /* line 263, ../scss/home.scss */
+  main .wrapper-section.flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* line 273, ../scss/home.scss */
+footer {
+  background-color: #fbf8f3;
+}
+/* line 276, ../scss/home.scss */
+footer .wrapper-footer {
+  display: grid;
+  justify-content: space-between;
+  grid-template: "one two three four five" / auto auto auto auto auto;
+  padding: 50px 0;
+}
+/* line 281, ../scss/home.scss */
+footer .wrapper-footer .column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 284, ../scss/home.scss */
+footer .wrapper-footer .column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 287, ../scss/home.scss */
+footer .wrapper-footer .column ul li {
+  color: #777572;
+  font-weight: 300;
+}
+/* line 292, ../scss/home.scss */
+footer .wrapper-footer .column.one {
+  grid-area: one;
+  width: 100%;
+  max-width: 500px;
+}
+/* line 298, ../scss/home.scss */
+footer .wrapper-footer .column.two {
+  grid-area: two;
+}
+/* line 302, ../scss/home.scss */
+footer .wrapper-footer .column.three {
+  grid-area: three;
+}
+/* line 306, ../scss/home.scss */
+footer .wrapper-footer .column.four {
+  grid-area: four;
+}
+/* line 310, ../scss/home.scss */
+footer .wrapper-footer .column.five {
+  grid-area: five;
+}
+/* line 314, ../scss/home.scss */
+footer .wrapper-footer .column p {
+  color: #777572;
+  font-weight: 300;
+}
+/* line 318, ../scss/home.scss */
+footer .wrapper-footer .column .logo p {
+  color: #000000;
+  font-weight: 700;
+}
+/* line 322, ../scss/home.scss */
+footer .wrapper-footer .column .made {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  /* line 276, ../scss/home.scss */
+  footer .wrapper-footer {
+    grid-template: "one" "two" "three" "four" "five" / auto;
+    gap: 50px;
+  }
+}
+
+/* line 338, ../scss/home.scss */
+button {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+/* line 343, ../scss/home.scss */
+button.in {
+  background-color: transparent;
+}
+/* line 346, ../scss/home.scss */
+button.in span {
+  color: #000000;
+  font-weight: 700;
+}
+/* line 351, ../scss/home.scss */
+button.start {
+  background-color: #FFFFFF;
+}
+/* line 354, ../scss/home.scss */
+button.start span {
+  color: #4d13d1;
+  font-weight: 700;
+}
+/* line 359, ../scss/home.scss */
+button.profile {
+  background-color: #FFFFFF;
+  border: 1px solid #dadada;
+}
+/* line 363, ../scss/home.scss */
+button.profile span {
+  color: #4d13d1;
+  font-weight: 700;
+}
+/* line 367, ../scss/home.scss */
+button.profile:hover {
+  background-color: #4d13d1;
+}
+/* line 370, ../scss/home.scss */
+button.profile:hover span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+/* line 376, ../scss/home.scss */
+button:hover {
+  opacity: .85;
+}
+
+/* line 381, ../scss/home.scss */
+a {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 387, ../scss/home.scss */
+a.up, a.create {
+  background-color: #4d13d1;
+}
+/* line 391, ../scss/home.scss */
+a.up span, a.create span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+/* line 396, ../scss/home.scss */
+a:hover {
+  opacity: .85;
+}
+
+/* line 401, ../scss/home.scss */
+p {
+  color: #4f4f4f;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* line 407, ../scss/home.scss */
+h2 {
+  color: #000000;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* line 411, ../scss/home.scss */
+.logo p {
+  color: #000000;
+  font-weight: 700;
+}

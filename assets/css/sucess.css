@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap");
+/* line 4, ../scss/sucess.scss */
+header {
+  background-color: #fbf8f3;
+}
+/* line 7, ../scss/sucess.scss */
+header .wrapper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+  position: relative;
+}
+/* line 12, ../scss/sucess.scss */
+header .wrapper-header ul {
+  display: flex;
+  gap: 30px;
+}
+/* line 15, ../scss/sucess.scss */
+header .wrapper-header ul li {
+  color: #000000;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  /* line 12, ../scss/sucess.scss */
+  header .wrapper-header ul {
+    display: none;
+  }
+}
+/* line 23, ../scss/sucess.scss */
+header .wrapper-header ul.active {
+  top: 80px;
+  border-radius: 10px 10px 0 0;
+}
+/* line 29, ../scss/sucess.scss */
+header .wrapper-header .wrapper-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+}
+/* line 34, ../scss/sucess.scss */
+header .wrapper-header .wrapper-buttons button,
+header .wrapper-header .wrapper-buttons a {
+  width: 100%;
+  max-width: 150px;
+}
+@media screen and (max-width: 768px) {
+  /* line 29, ../scss/sucess.scss */
+  header .wrapper-header .wrapper-buttons {
+    display: none;
+  }
+}
+/* line 44, ../scss/sucess.scss */
+header .wrapper-header .wrapper-buttons.active {
+  top: 212px;
+  max-width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+@media screen and (min-width: 1280px) {
+  /* line 51, ../scss/sucess.scss */
+  header .wrapper-header .menu-mobile {
+    display: none;
+  }
+}
+/* line 59, ../scss/sucess.scss */
+header .wrapper-header ul.active,
+header .wrapper-header .wrapper-buttons.active {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #FFFFFF;
+  padding: 30px;
+  z-index: 999;
+}
+
+/* line 72, ../scss/sucess.scss */
+main .wrapper-sucess {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin: 80px 0;
+  position: relative;
+}
+/* line 77, ../scss/sucess.scss */
+main .wrapper-sucess .home {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/* line 80, ../scss/sucess.scss */
+main .wrapper-sucess .home a {
+  color: #000000;
+  font-weight: 400;
+}
+/* line 85, ../scss/sucess.scss */
+main .wrapper-sucess .container-check {
+  display: block;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 97, ../scss/sucess.scss */
+main .wrapper-sucess .container-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* line 105, ../scss/sucess.scss */
+main .wrapper-sucess .checkmark {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+  background-color: #FFFFFF;
+  border: 1px solid #dadada;
+  border-radius: 50%;
+}
+/* line 117, ../scss/sucess.scss */
+main .wrapper-sucess .container-check:hover input ~ .checkmark {
+  background-color: #4d13d1;
+}
+/* line 121, ../scss/sucess.scss */
+main .wrapper-sucess .container-check input:checked ~ .checkmark {
+  background-color: #4d13d1;
+}
+/* line 125, ../scss/sucess.scss */
+main .wrapper-sucess .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* line 131, ../scss/sucess.scss */
+main .wrapper-sucess .container-check input:checked ~ .checkmark:after {
+  display: block;
+}
+/* line 135, ../scss/sucess.scss */
+main .wrapper-sucess .container-check .checkmark:after {
+  left: 17px;
+  top: 14px;
+  width: 10px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 149, ../scss/sucess.scss */
+footer {
+  background-color: #fbf8f3;
+}
+/* line 152, ../scss/sucess.scss */
+footer .wrapper-footer {
+  display: grid;
+  justify-content: space-between;
+  grid-template: "one two three four five" / auto auto auto auto auto;
+  padding: 50px 0;
+}
+/* line 157, ../scss/sucess.scss */
+footer .wrapper-footer .column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 160, ../scss/sucess.scss */
+footer .wrapper-footer .column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* line 163, ../scss/sucess.scss */
+footer .wrapper-footer .column ul li {
+  color: #777572;
+  font-weight: 300;
+}
+/* line 168, ../scss/sucess.scss */
+footer .wrapper-footer .column.one {
+  grid-area: one;
+  width: 100%;
+  max-width: 500px;
+}
+/* line 174, ../scss/sucess.scss */
+footer .wrapper-footer .column.two {
+  grid-area: two;
+}
+/* line 178, ../scss/sucess.scss */
+footer .wrapper-footer .column.three {
+  grid-area: three;
+}
+/* line 182, ../scss/sucess.scss */
+footer .wrapper-footer .column.four {
+  grid-area: four;
+}
+/* line 186, ../scss/sucess.scss */
+footer .wrapper-footer .column.five {
+  grid-area: five;
+}
+/* line 190, ../scss/sucess.scss */
+footer .wrapper-footer .column p {
+  color: #777572;
+  font-weight: 300;
+}
+/* line 194, ../scss/sucess.scss */
+footer .wrapper-footer .column .logo p {
+  color: #000000;
+  font-weight: 700;
+}
+/* line 198, ../scss/sucess.scss */
+footer .wrapper-footer .column .made {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  /* line 152, ../scss/sucess.scss */
+  footer .wrapper-footer {
+    grid-template: "one" "two" "three" "four" "five" / auto;
+    gap: 50px;
+  }
+}
+
+/* line 214, ../scss/sucess.scss */
+button {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+/* line 219, ../scss/sucess.scss */
+button.in {
+  background-color: transparent;
+}
+/* line 222, ../scss/sucess.scss */
+button.in span {
+  color: #000000;
+  font-weight: 700;
+}
+/* line 227, ../scss/sucess.scss */
+button.start {
+  background-color: #FFFFFF;
+}
+/* line 230, ../scss/sucess.scss */
+button.start span {
+  color: #4d13d1;
+  font-weight: 700;
+}
+/* line 235, ../scss/sucess.scss */
+button.profile {
+  background-color: #FFFFFF;
+  border: 1px solid #dadada;
+}
+/* line 239, ../scss/sucess.scss */
+button.profile span {
+  color: #4d13d1;
+  font-weight: 700;
+}
+/* line 243, ../scss/sucess.scss */
+button.profile:hover {
+  background-color: #4d13d1;
+}
+/* line 246, ../scss/sucess.scss */
+button.profile:hover span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+/* line 252, ../scss/sucess.scss */
+button:hover {
+  opacity: .85;
+}
+
+/* line 257, ../scss/sucess.scss */
+a {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 263, ../scss/sucess.scss */
+a.up, a.create {
+  background-color: #4d13d1;
+}
+/* line 267, ../scss/sucess.scss */
+a.up span, a.create span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+/* line 272, ../scss/sucess.scss */
+a:hover {
+  opacity: .85;
+}
+
+/* line 277, ../scss/sucess.scss */
+p {
+  color: #4f4f4f;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* line 283, ../scss/sucess.scss */
+h2 {
+  color: #000000;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+/* line 287, ../scss/sucess.scss */
+.logo p {
+  color: #000000;
+  font-weight: 700;
+}
